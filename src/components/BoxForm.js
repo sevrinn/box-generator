@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 
 
 const BoxForm = (props) => {
+
+  
   //this variable holds state for the color the user enters
   const [boxColor, setBoxColor] = useState("");
+  // //boxHeight holds state for height user enters
+  // const [boxHeight, setBoxHeight] = useState("");
+  // //boxProperties holds the state of our color and height in an object
+  // const [boxProperties, setBoxProperties] = useState({});
   //destructures props brought in from app.js
   const {boxList, setBoxList} = props;
 
@@ -12,6 +18,7 @@ const BoxForm = (props) => {
   //function that took in the event of the submit button being clicked
 
   //it prevents the page from reloading
+  //it sets boxproperties to 
   //sets the boxlist to a shallow copy of current boxList (of colors) 
   //and adds new color
   const newBox=(event)=> {
@@ -21,7 +28,7 @@ const BoxForm = (props) => {
   }
 
   return(
-    // on submit takes the even, calls the newBox func and passes it the event
+    // on submit takes the event, calls the newBox func and passes it the event
     //as the input changes, onChange takes in the change event, setting the BoxColor (passed in as a prop) to be whatever is being typed in input
     //needs value to equal boxColor to see typing in field
     <form onSubmit={(event) => newBox(event)}>
@@ -31,6 +38,7 @@ const BoxForm = (props) => {
           setBoxColor(changeEvent.target.value);
         }} type="text"
           value={boxColor} />
+          
         <button>Add </button>
       </form>
   );
