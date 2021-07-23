@@ -21,10 +21,10 @@ function App() {
                   marginLeft: "auto", 
                   marginRight: "auto"
                   }}>
-      {/* maps over boxList, taking in the users colo */}
+      {/* maps over each index */}
       {
-        boxList.map((color, i) => {
-          return <div key={i} style={{backgroundColor: color, width: 100, height: 100, marginRight: 10, marginTop: 10}}>
+        boxList.map((color, index) => {
+          return <div key={index} style={{backgroundColor: color, width: 100, height: 100, marginRight: 10, marginTop: 10}}>
 
           </div>
         })
