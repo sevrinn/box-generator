@@ -17,11 +17,11 @@ function App() {
                   flexWrap: "wrap", 
                   justifyContent: "center", 
                   textAlign: "center", 
-                  width: 550, 
+                  width: 650, 
                   marginLeft: "auto", 
                   marginRight: "auto"
                   }}>
-      {/* maps over each index */}
+      {/* maps over each item in boxList array returning a div, with styles including the color that was inputed  */}
       {
         boxList.map((color, index) => {
           return <div key={index} style={{backgroundColor: color, width: 100, height: 100, marginRight: 10, marginTop: 10}}>
