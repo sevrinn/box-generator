@@ -1,6 +1,15 @@
+/**
+ * As of right now this code is NOT working. I was trying to add mulitple user parameters 
+ * and confused myself so putting it down for a second. I WILL be back soon. Seriously driving me nuts. 
+ * When the submitted, app adds new box object to box object by setting state of boxList.
+ * I can print that list to the console. Why can I not get them to render on the app.js. the component 
+ * is imported correctly. hmmmmmmm. okay. sit on it. do something else and come back.
+ */
+
 import React, { useState } from 'react';
 import './App.css';
 import BoxForm from './components/BoxForm';
+
 
 
 function App() {
@@ -23,8 +32,9 @@ function App() {
                   }}>
       {/* maps over each item in boxList array returning a div, with styles including the color that was inputed  */}
       {
-        boxList.map((color, index) => {
-          return <div key={index} style={{backgroundColor: color, width: 100, height: 100, marginRight: 10, marginTop: 10}}>
+        boxList.map((box, index) => {
+          console.log(box.boxColor);
+          return <div key={index} style={{backgroundColor: box.boxColor, width: 100, height: box.boxHeight, marginRight: 10, marginTop: 10}}>
 
           </div>
         })
